@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>hello</title>
+</head>
+
+<body>
+  <style>
+  h1 {
+  color: blue;
+  text-align: center;
+}
+
+
+
+
+  </style>
+  <h1>Personality Quiz</h1>
+
+<div id = "myDiv">
+  What kind of candy are you?
+<br/ >
+Choose and option:
+<input type="radio" id="radio1" name="myRadio">
+<input type="radio" id="radio2" name="myRadio">
+<input type="radio" id="radio3" name="myRadio">
+<input type="radio" id="radio1" name="myRadio">
+<br/ >
+<input type="button" value="Submit" onclick="getTextInput()">
+</div>
+
+<script type = "text/javascript">
+
+  function getTextInput(){
+    var input = document.getElementById("myText").value;
+    var dessertString = "My favorite dessert is ";
+
+    if(input == "pie"||input == "chocolate"){
+      document.getElementById("myDiv").innerHTML += "<br />" +"<br />" + "Pie is gross!";
+    }
+
+    else{
+
+      document.getElementById("myDiv").innerHTML += "<br />" +"<br />" + dessertString+input;
+
+    }
+
+
+
+  }
+  </script>
+
+  </body>
+  </html>
