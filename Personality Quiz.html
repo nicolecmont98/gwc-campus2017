@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>hello</title>
+</head>
+
+<body>
+  <style>
+  h1 {
+  color: blue;
+  text-align: center;
+}
+  </style>
+  <h1>Personality Quiz</h1>
+
+<div id = "myDiv">
+  <h3>What cartoon character are you?</h3>
+
+
+<br/ >
+Whats your favorite type of weather?:
+
+<br/>
+  <p>fall
+  <input type="radio" id="weather1" name="weather">
+  </p>
+  <p>Spring
+  <input type="radio" id="weather2" name="weather">
+  </p>
+  <p>Winter
+  <input type="radio" id="weather3" name="weather">
+  </p>
+  <p>Summer
+  <input type="radio" id="weather4" name="weather">
+  </p>
+<br/ >
+
+
+<br/ >
+
+
+Whats your favorite food?:
+
+  <br/>
+    <p>Pizza
+    <input type="radio" id="radio1" name="food">
+    </p>
+    <p>Tacos
+    <input type="radio" id="radio2" name="food">
+    <p> Pesto Pasta
+    <input type="radio" id="radio3" name="food">
+    </p>
+    <p>Ribs
+    <input type="radio" id="radio1" name="food">
+    </p>
+
+
+<input type="button" value="Submit" onclick="getTextInput()">
+</div>
+
+<script type = "text/javascript">
+  function getTextInput(){
+  //  var input = document.getElementById("myText").value;
+    var dessertString = "My favorite dessert is ";
+    if(document.getElementById("weather1").checked){
+      document.getElementById("myDiv").innerHTML += "<br />" +"<br />" + "fall";
+    }
+
+    if(document.getElementById("weather2").checked){
+      document.getElementById("myDiv").innerHTML += "<br />" +"<br />" + "Spring";
+    }
+
+    if(document.getElementById("weather3").checked){
+      document.getElementById("myDiv").innerHTML += "<br />" +"<br />" + "winter";
+    }
+    if(document.getElementById("weather4").checked){
+      document.getElementById("myDiv").innerHTML += "<br />" +"<br />" + "summer";
+    }
+
+
+
+
+    else{
+      document.getElementById("myDiv").innerHTML += "<br />" +"<br />" + dessertString+input;
+    }
+  }
+  </script>
+
+  </body>
+  </html>
