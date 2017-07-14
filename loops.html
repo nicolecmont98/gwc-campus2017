@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<style>
+
+body  {
+    color:rgb(255,64,251);
+    font-family: monospace;
+    font-size: 100%;
+    text-align: center;
+}
+body {background-color: black;}
+
+
+</style>
+<h1>Ubbi Dubbi Translator</h1>
+<h4>Translate any word or phrase to Ubbi Dubbi!</h4>
+
+<input type="text" id="myText" >
+
+<input type = "button" value = "Translate" name = "SubmitButton" id = "button1" onclick="document.getElementById('sample').innerHTML =
+    changeVowel(document.getElementById('myText').value)">
+
+<p id="sample"></p>
+
+<script type="text/javascript">
+
+  function changeVowel(inString){
+    var outString="";
+
+    for (var i=0; i<inString.length; i+=1){
+      if (inString.charAt(i)=="a"){
+          outString += "uba";
+      }
+      else if(inString.charAt(i)=="e"){
+        outString += "ube";
+      }
+      else if(inString.charAt(i)=="i"){
+        outString += "ubi";
+      }
+      else if(inString.charAt(i)=="o"){
+        outString += "ubo";
+      }
+      else if(inString.charAt(i)=="u"){
+        outString += "ubu";
+      }
+      else{
+        outString += inString.charAt(i);
+      }
+    }
+    return outString;
+  }
+
+
+
+
+</script>
+</body>
+
+
+</html>
